@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RDM Exim — Clothes, rice and spices, exported with care</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#top"><span class="logo"><img src="assets/logo.png" alt="" onerror="this.remove()"><b>RDM</b><small>EXIM</small></span>RDM</a>
+  <a class="btn gold" href="#contact">Contact us</a>
+</div></header>
+
+<div class="hero" id="top"><div class="wrap">
+  <div class="logo big"><img src="assets/logo.png" alt="" onerror="this.remove()"><b>RDM</b><small>EXIM</small></div>
+  <div class="eyebrow mono">Export company</div>
+  <h1>Clothes,<br><span>rice and spices,<br>exported with care</span></h1>
+  <p>RDM supplies clothes, rice and spices to buyers overseas. One company, one quote, one shipment.</p>
+  <div class="cta"><a class="btn gold" href="#contact">Request a quote</a><a class="btn line" href="#products">See products</a></div>
+  <div class="tags mono"><span>Clothes · Rice · Spices</span><span>Mixed container orders</span><span>Samples on request</span></div>
+</div></div>
+
+<section id="products"><div class="wrap">
+  <div class="eyebrow mono" style="color:#8a6a00">Products</div>
+  <h2>What we export</h2>
+  <p class="sub">Pick an item and ask for a quote, or tell us what you need.</p>
+  <div id="catalogue"><p class="sub">Loading catalogue…</p></div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <div class="eyebrow mono" style="color:#8a6a00">Why RDM</div>
+  <h2>What you can expect</h2>
+  <div class="cards">
+    <div class="card"><h3>One quote for mixed orders</h3><p>Clothes, rice and spices can go in the same shipment. You get one price and one contact.</p></div>
+    <div class="card"><h3>Samples before you commit</h3><p>Ask for samples of the product you want to import before placing a full order.</p></div>
+    <div class="card"><h3>Specification in writing</h3><p>Grade, packing and price are agreed with you before anything ships.</p></div>
+    <div class="card"><h3>A direct line to us</h3><p>You talk to the people handling your order, by phone, email or WhatsApp.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow mono" style="color:#1b3a7a">About</div>
+  <h2>A trading partner you can reach directly</h2>
+  <p class="sub">RDM exports clothes, rice and spices. We work with suppliers, handle the paperwork and ship to your port.</p>
+  <div class="svc"><h3>Sourcing</h3><p>We find and compare suppliers for the quality and price you need.</p></div>
+  <div class="svc"><h3>Packing and labelling</h3><p>Cartons, bags and labels prepared for your market.</p></div>
+  <div class="svc"><h3>Export documents</h3><p>Invoice, packing list and the papers your customs office asks for.</p></div>
+  <div class="svc"><h3>Shipping</h3><p>We coordinate container loading and freight to your port.</p></div>
+</div></section>
+
+<section class="dark"><div class="wrap">
+  <div class="eyebrow mono">How we work</div>
+  <h2>From inquiry to your port</h2>
+  <div class="step"><div class="mono">Step 1</div><h3>Inquiry</h3><p>You send the product, quantity and destination.</p></div>
+  <div class="step"><div class="mono">Step 2</div><h3>Quote and samples</h3><p>We reply with prices, shipping terms and samples if needed.</p></div>
+  <div class="step"><div class="mono">Step 3</div><h3>Shipment</h3><p>We load the container and send you the documents.</p></div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="eyebrow mono" style="color:#8a6a00">Contact</div>
+  <h2>Tell us what you need to import</h2>
+  <p class="sub">Send the product, quantity and destination. We reply with prices and shipping terms.</p>
+  <div class="crow"><div><span class="mono">Email</span><b id="c-email"></b></div><button class="mini" data-copy="email">Copy</button></div>
+  <div class="crow"><div><span class="mono">Phone</span><b id="c-in"></b></div><button class="mini" data-copy="in">Copy</button></div>
+  <div class="crow"><div><span class="mono">Phone</span><b id="c-mu"></b></div><button class="mini" data-copy="mu">Copy</button></div>
+
+  <form class="box" id="inqForm">
+    <label>Your name</label><input name="name" placeholder="Full name" required>
+    <label>Company</label><input name="company" placeholder="Company name">
+    <label>Email or phone</label><input name="contact" placeholder="How we reach you" required>
+    <label>Destination country</label><input name="country" placeholder="Country or port">
+    <label>Product</label><select name="product" id="productSelect"></select>
+    <label>Quantity</label><input name="quantity" placeholder="e.g. 1 x 20ft container">
+    <label>Details</label><textarea name="details" placeholder="Variety, packing, sizes, target price, anything else"></textarea>
+    <button class="btn blue" style="width:100%;margin-top:22px" type="submit">Send my request</button>
+    <div class="ok" id="ok">Thank you! Your request has been sent. We will contact you soon.</div>
+    <div class="err" id="err">Could not send. Please email or call us directly.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="brand"><span class="logo"><img src="assets/logo.png" alt="" onerror="this.remove()"><b>RDM</b><small>EXIM</small></span>RDM</div>
+  <p style="font-size:1.2rem">Clothes, rice and spices, exported with care</p>
+  <h4 class="mono">Products</h4><div id="footCats"></div>
+  <h4 class="mono">Contact</h4><a id="f-email"></a><a id="f-in"></a><a id="f-mu"></a>
+  <div class="bot"><span>© 2026 RDM. All rights reserved.</span><span id="footLine"></span></div>
+</div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
