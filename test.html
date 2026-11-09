@@ -1,0 +1,19 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<h2>RDM test</h2>
+<pre id="o" style="white-space:pre-wrap;font-size:16px">running...</pre>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script>
+const o = document.getElementById('o');
+const log = m => o.textContent += '\n' + m;
+log('supabase library: ' + (window.supabase ? 'OK' : 'MISSING'));
+log('config: ' + (window.RDM_CONFIG ? 'OK' : 'MISSING'));
+try {
+  const sb = supabase.createClient(RDM_CONFIG.SUPABASE_URL, RDM_CONFIG.SUPABASE_ANON_KEY);
+  sb.from('categories').select('name').then(r =>
+    log('categories: ' + (r.error ? 'ERROR ' + r.error.message : JSON.stringify(r.data.map(x => x.name)))))
+    .catch(e => log('FETCH ERROR ' + e));
+} catch (e) { log('ERROR ' + e.message); }
+</script>
